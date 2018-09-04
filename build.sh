@@ -2,8 +2,9 @@
 
 # X11 authentication
 mkdir -p ./tmp
+rm -f ./tmp/.docker.xauth
 chmod 777 ./tmp
-export XAUTH=./tmp/.docker.xauth resources
+export XAUTH=./tmp/.docker.xauth #resources
 if [ ! -e $XAUTH ] ; then
 	echo "Creating authentication file ${XAUTH}"
 	touch $XAUTH
